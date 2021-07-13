@@ -1,4 +1,4 @@
-# TelegramBotForRaspberryPi
+# Telegram Bot for Raspberry Pi
 With Telegram (pyTelegramBotAPI) control your Raspberry Pi for smart home projects. You can send and receive information to/from Raspberry Pi, activate/deactivate GPIO's on the card. Telegram is a very efficient way to conduct a two way communication. 
 
 In this example a home alarm control is conducted with Raspberry Pi with following hardware:
