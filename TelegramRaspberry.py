@@ -24,7 +24,7 @@ chat_id = "TELEGRAM_CHAT_ID_THAT_YOU_OBTAINED"             #Enter telegram chat 
 bot_status_flag = 0
 while bot_status_flag==0:
     try:
-        bot = telebot.TeleBot("API_KEY_THAT_YOU_OBTAINED") #Enter API key you obtained from Telegram BotFather.
+        bot = telebot.TeleBot("TOKEN_KEY_THAT_YOU_OBTAINED") #Enter token you obtained from Telegram BotFather.
         bot.send_message(chat_id,'DEVICE IS RESTARTED. ALL ALARM ORDERS ARE RESET.')
         bot_status_flag = 1
     except:
