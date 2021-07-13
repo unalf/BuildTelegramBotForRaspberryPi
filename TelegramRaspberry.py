@@ -49,16 +49,16 @@ def listen_PIR():
             MOTION_STRING = 'NO MOTION'
 
           if (ALARM_SET==1) & (MOTION_DETECTED>0) & (alarm.value ==0):
-            siren.on() #START SIREN AT LEAST FOR 15 SECONDS EVEN PIR SIGNAL DISAPPEARS
+            alarm.on() #START SIREN AT LEAST FOR 15 SECONDS EVEN PIR SIGNAL DISAPPEARS
             bot.send_message(chat_id, 'SIREN IS ACTIVE. MOTION DETECTED! '+ MOTION_STRING)
             time.sleep(15)
 
           if (MOTION_DETECTED==0) & (alarm.value == 1):
-            siren.off() #STOP ALARM ORDER
+            alarm.off() #STOP ALARM ORDER
             bot.send_message(chat_id, 'SIREN IS STOPPED! '+ MOTION_STRING)
 
           if (ALARM_SET==0) & (alarm.value ==1):
-            siren.off() #STOP SIREN ORDER
+            alarm.off() #STOP SIREN ORDER
             bot.send_message(chat_id, 'SIREN IS STOPPED BY YOUR ORDER! '+ MOTION_STRING)
       except:
         print("Error at Listen PIR Function.")
